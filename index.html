@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ConnectChat® - All Rights Reserved</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="authScreen">
+    <h1>ConnectChat®</h1>
+    <input type="text" id="username" placeholder="Username">
+    <button onclick="login()">Enter</button>
+</div>
+
+<div id="app" class="hidden">
+
+<header>
+    <h1>ConnectChat®</h1>
+    <div>
+        <span id="currentUser"></span>
+        <button onclick="logout()">Logout</button>
+    </div>
+</header>
+
+<nav>
+    <button onclick="showSection('feed')">ConnectChat</button>
+    <button onclick="showSection('shortchat')">ShortChat</button>
+    <button onclick="showSection('connectvids')">ConnectVids</button>
+    <button onclick="showSection('connectmusic')">ConnectMusic</button>
+    <button onclick="showSection('playgames')">PlayGames</button>
+    <button onclick="showSection('admin')">Admin</button>
+</nav>
+
+<!-- CONNECTCHAT -->
+<section id="feed" class="active">
+    <h2>Main Feed</h2>
+    <textarea id="postText" placeholder="What's happening?"></textarea>
+    <input type="file" id="mediaUpload" accept="image/*,video/*">
+    <button onclick="createPost()">Post</button>
+    <div id="posts"></div>
+</section>
+
+<!-- SHORTCHAT -->
+<section id="shortchat">
+    <h2>ShortChat</h2>
+    <input type="text" id="chatMessage" placeholder="Message">
+    <button onclick="sendMessage()">Send</button>
+    <div id="chatBox"></div>
+</section>
+
+<!-- CONNECTVIDS -->
+<section id="connectvids">
+    <h2>ConnectVids</h2>
+    <input type="file" id="videoUpload" accept="video/*">
+    <button onclick="uploadVideo()">Upload</button>
+    <div id="videoFeed"></div>
+</section>
+
+<!-- CONNECTMUSIC -->
+<section id="connectmusic">
+    <h2>ConnectMusic (30s previews only)</h2>
+    <input type="text" id="songTitle" placeholder="Song Title">
+    <input type="text" id="artistName" placeholder="Artist">
+    <input type="file" id="audioUpload" accept="audio/*">
+    <button onclick="uploadSong()">Upload</button>
+    <div id="musicFeed"></div>
+</section>
+
+<!-- PLAYGAMES -->
+<section id="playgames">
+    <h2>PlayGames</h2>
+    <input type="url" id="gameLink" placeholder="Game link">
+    <button onclick="submitGame()">Submit</button>
+    <div id="gamesList"></div>
+</section>
+
+<!-- ADMIN REPORTS -->
+<section id="admin">
+    <h2>Reports (Admin Only)</h2>
+    <button onclick="viewReports()">Refresh Reports</button>
+    <div id="reportList"></div>
+</section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+

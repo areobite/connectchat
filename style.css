@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #0f0f0f;
+    color: white;
+}
+
+.hidden { display: none; }
+
+header {
+    background: black;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid gold;
+}
+
+nav {
+    background: #111;
+    padding: 10px;
+    text-align: center;
+}
+
+nav button {
+    margin: 5px;
+    padding: 8px 15px;
+    background: black;
+    color: gold;
+    border: 1px solid gold;
+    cursor: pointer;
+}
+
+section {
+    display: none;
+    padding: 20px;
+}
+
+section.active { display: block; }
+
+textarea, input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    background: #222;
+    color: white;
+    border: 1px solid gold;
+}
+
+button {
+    padding: 8px 12px;
+    background: gold;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.post, .videoPost, .musicPost {
+    background: #1a1a1a;
+    padding: 15px;
+    margin-top: 10px;
+    border-left: 3px solid gold;
+}
+
+.comment {
+    background: #222;
+    margin-top: 5px;
+    padding: 5px;
+    border-left: 2px solid gold;
+}
+
+#authScreen {
+    text-align: center;
+    margin-top: 100px;
+}
